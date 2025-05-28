@@ -1,20 +1,45 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import videoSrc from '../assets/hero1.mp4';
-
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 const ProductShowcase = () => {
+  const navigate=useNavigate();
+  interface Product {
+    id: string;
+    title: string;
+    description: string;
+    price: number;
+    images: string[];
+    sizes: string[];
+  }
   const [selectedSize, setSelectedSize] = useState("");
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  // const sizes = ['XS', 'S', 'M', 'L', 'XL'];
+  // const thumbnails = [
+  //   "/vermillion1.jpg",
+  //   "/vermillon3.jpg",
+  //   "/vermillion2.jpg"
+  // ];
+useEffect(() => {
+    const fetchProducts = async (): Promise<void> => {
+      try {
+        const response = await axios.get<Product[]>('http://localhost:5000/api/products');
+        setProducts(response.data);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const sizes = ['XS', 'S', 'M', 'L', 'XL'];
-  const thumbnails = [
-    "/vermillion1.jpg",
-    "/vermillon3.jpg",
-    "/vermillion2.jpg"
-  ];
-
+    fetchProducts(); // call the async function
+  }, []);
+  const product=products[0];
   return (
     <section className="min-h-screen text-white md:px-3 sm:px-0">
       <h1 className="text-2xl md:text-3xl font-light mb-12 ml-1 md:ml-3">
-        Silhouette No. 1 – Vermilion
+        {product?.title}
       </h1>
 
       <div className="flex flex-col md:flex-row  md:gap-0">
@@ -34,13 +59,13 @@ const ProductShowcase = () => {
   className="text-[15px] mb-6 sm:mb-8 hidden md:block"
   style={{ fontFamily: 'Neue Montreal, sans-serif' }}
 >
-  A tailored composition in motion. Cut from structured wool with a sculpted shoulder and softened hem, this piece captures presence without force. Worn here in the stillness of a city in motion.
+ {product?.description}
 </p>
 
 
             {/* Thumbnails */}
             <div className="flex gap-5 md:gap-3 overflow-x-auto mb-5 md:mb-20 md:mt-8 sm:mt-[5px]">
-  {thumbnails.map((src, idx) => (
+  {product?.images?.map((src, idx) => (
     <img
       key={idx}
       src={src}
@@ -54,7 +79,7 @@ const ProductShowcase = () => {
             {/* Price */}
             <p className=" text-[30px] md:text-2xl font-semibold mb-6 mt-8"
              style={{ fontFamily: 'Helvetica Neue, sans-serif' }}>
-              ₹ 7,999{" "}
+              ₹ {product?.price}{" "}
               <span className="text-gray-500 text-[17px] md:text-sm font-normal">
                 MRP incl. of all taxes
               </span>
@@ -69,7 +94,7 @@ const ProductShowcase = () => {
             </label>
             <div className="flex gap-3 overflow-x-auto flex-nowrap mb-6">
 
-              {sizes.map((size) => (
+              {product?.sizes?.map((size) => (
                 <button
                   key={size}
                   onClick={() => setSelectedSize(size)}
@@ -89,9 +114,19 @@ const ProductShowcase = () => {
           {/* Buttons */}
           <div className="flex flex-col-reverse sm:flex-row sm:space-x-4 gap-4 sm:mb-8 mt-6">
 
-            <button className="border border-black px-6 w-full sm:w-[196px] h-[50px] rounded-[9px] text-sm hover:bg-black hover:text-white transition">
-              Add to Cart
-            </button>
+          <button
+  className="border border-black px-6 w-full sm:w-[196px] h-[50px] rounded-[9px] text-sm hover:bg-black hover:text-white transition"
+  onClick={() => {
+    if (!selectedSize) {
+      alert("Please select a size before adding to cart.");
+      return;
+    }
+    navigate('/cart', { state: { selectedSize, product } });
+  }}
+>
+  Add to Cart
+</button>
+
             <button className="bg-black text-white px-6 py-2 md:py-5 w-full sm:w-[428px] rounded-[9px] text-sm hover:bg-gray-800 transition">
               Buy
             </button>

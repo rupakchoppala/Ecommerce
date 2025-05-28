@@ -1,19 +1,35 @@
-import logo from '../assets/logo_circle.png'; // Replace with your actual logo path
+import React from "react";
+import logo from '../assets/logo_circle.png';
+import { Link } from "react-router-dom";
 
-const Header = () => {
+interface HeaderProps {
+  isCartPage: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ isCartPage }) => {
   return (
-    <header className="flex justify-between items-center px-4 py-3 bg-black text-white text-sm w-full flex-wrap">
-      {/* Logo */}
-      <div className="flex items-center ml-2">
+    <header className={`flex justify-between items-center px-4 py-3 text-sm w-full flex-wrap ${
+      isCartPage ? "bg-white text-black" : "bg-black text-white"
+    }`}>
+      <div className="flex items-center ml-2 md:ml-4">
         <img src={logo} alt="Eclypse Logo" className="w-[40px] h-[38px]" />
       </div>
 
-      {/* Navigation */}
       <nav className="flex items-center gap-3 sm:gap-6 text-xs sm:text-sm mr-2 flex-wrap">
-        <a href="#" className="hover:underline whitespace-nowrap">About Us</a>
-        <a href="#" className="hover:underline whitespace-nowrap">Waitlist</a>
-        <a href="#" className="hover:underline whitespace-nowrap">Cart</a>
-        <button className="bg-white text-black px-3 py-1 text-xs sm:text-sm rounded-[6px] shadow">
+        <Link to="/" className={`hover:underline whitespace-nowrap ${isCartPage ? "text-black" : "text-white"}`}>
+          About Us
+        </Link>
+        <Link to="/waitlist" className={`hover:underline whitespace-nowrap ${isCartPage ? "text-black" : "text-white"}`}>
+          Waitlist
+        </Link>
+        <Link to="/cart" className={`hover:underline whitespace-nowrap ${isCartPage ? "text-black" : "text-white"}`}>
+          Cart
+        </Link>
+        <button
+          className={`px-3 py-1 text-xs sm:text-sm rounded-[6px] shadow ${
+            isCartPage ? "bg-black text-white hidden" : "bg-white text-black"
+          }`}
+        >
           Buy
         </button>
       </nav>
