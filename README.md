@@ -1,69 +1,81 @@
 # 🛒 eCommerce Website
 
-A modern, responsive, and stylish eCommerce web application built using **React + TypeScript**. Designed to offer a smooth shopping experience with user-friendly navigation, cart handling, product browsing, animations, and a beautiful red-and-white UI theme.
+An elegant, responsive, and feature-rich **eCommerce platform** developed using the MERN stack. Designed for seamless shopping experiences for users and powerful product and order management for admins.
 
----
+## 🔗 Live Demo
+[Check it out here](https://your-deployed-site-link.com)
 
-## 🚀 Live Demo
+## 🚀 Features
 
-🌐 [View Demo](https://your-live-site-link.com)  
-📁 [Frontend GitHub Repo](https://github.com/your-username/ecommerce-frontend)
+### 👤 User Side
+- Browse products by categories
+- Product search & filtering
+- Add to cart & wishlist
+- Secure login/signup with JWT
+- Checkout and payment integration
+- Order tracking
 
----
+### 🛠️ Admin Side
+- Dashboard with analytics
+- Manage products (CRUD)
+- Manage orders
+- User management
+- Upload product images
 
-## 📌 Features
+## 🧰 Tech Stack
 
-- ✅ Fully responsive & modern UI (red + white theme)
-- 🔍 Product browsing, search, and filtering
-- 🛒 Add to cart, remove from cart
-- ❤️ Wishlist functionality
-- 🧾 Checkout page (dummy or integrated with payment gateway)
-- 👥 Authentication (optional: JWT/Auth)
-- 📦 Order summary & confirmation
-- 📬 Waitlist/Newsletter component
-- 🎯 About Us page with animations
-- 🌈 Framer Motion & Tailwind styling
+| Frontend       | Backend        | Database  | Others               |
+|----------------|----------------|-----------|----------------------|
+| React.js       | Node.js        | MongoDB   | Tailwind CSS         |
+| Redux Toolkit  | Express.js     | Mongoose  | Stripe API (Payments)|
+| React Router   | JWT Auth       |           | Cloudinary (Images)  |
 
----
+## 📸 Screenshots
 
-## 📂 Project Structure
+> _(Include screenshots or screen recordings of key pages like home, product page, cart, admin dashboard, etc.)_
 
-ecommerce-client/
-├── public/
-├── src/
-│ ├── assets/ # Images, logos
-│ ├── components/ # Reusable components
-│ │ ├── Header.tsx
-│ │ ├── Footer.tsx
-│ │ ├── ProductCard.tsx
-│ │ ├── Waitlist.tsx
-│ │ └── AboutUs.tsx
-│ ├── pages/ # Pages like Home, Products, Cart, Checkout
-│ │ ├── Home.tsx
-│ │ ├── Products.tsx
-│ │ └── Cart.tsx
-│ ├── hooks/ # Custom hooks
-│ ├── utils/ # Utility functions
-│ ├── types/ # TypeScript types/interfaces
-│ ├── App.tsx
-│ └── main.tsx
-├── tailwind.config.js
-├── package.json
-└── tsconfig.json
+## 🏗️ Folder Structure
+client/ # React frontend
+server/ # Node backend
+├── models/ # Mongoose models
+├── routes/ # API routes
+├── controllers/
 
----
+## 🛠️ Setup Instructions
 
-## ⚙️ Installation
-
-### Prerequisites
-
-- Node.js ≥ 18.x
-- npm / pnpm / yarn
-
-### Steps
-
+### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/ecommerce-client.git
-cd ecommerce-client
+git clone https://github.com/your-username/ecommerce-project.git
+cd Ecommerce
+cd client
 npm install
+cd ../server
+npm install
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+STRIPE_SECRET_KEY=your_stripe_key
+CLOUDINARY_URL=your_cloudinary_url
+RAZORPAY_KEY_ID=your_razor_id
+RAZORPAY_KEY_SECRET=your_secret_key
+# Run backend
+cd server
 npm run dev
+
+# In another terminal, run frontend
+cd client
+npm start
+👨‍💻 Author
+Rupak Naga Venkata Satya Durga Sai Choppala
+
+🔗 LinkedIn
+
+💼 Portfolio
+
+📫 rupak@example.com
+📃 License
+This project is licensed under the MIT License.
+
+---
+
+Let me know if you want this tailored with your actual **GitHub link**, **live demo link**, **screenshots**, or if it's built using **different technologies** (e.g., Firebase, MySQL, Next.js, etc.).
+
