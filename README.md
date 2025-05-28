@@ -35,11 +35,11 @@ An elegant, responsive, and feature-rich **eCommerce platform** developed using 
 > _(Include screenshots or screen recordings of key pages like home, product page, cart, admin dashboard, etc.)_
 
 ## 🏗️ Folder Structure
-client/ # React frontend
-server/ # Node backend
-├── models/ # Mongoose models
-├── routes/ # API routes
-├── controllers/
+-client/ # React frontend
+-server/ # Node backend
+-├── models/ # Mongoose models
+-├── routes/ # API routes
+-├── controllers/
 
 ## 🛠️ Setup Instructions
 
