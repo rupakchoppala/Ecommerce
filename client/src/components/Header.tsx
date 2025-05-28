@@ -1,12 +1,13 @@
 import React from "react";
 import logo from '../assets/logo_circle.png';
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 interface HeaderProps {
   isCartPage: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({ isCartPage }) => {
+  const navigate=useNavigate();
   return (
     <header className={`flex justify-between items-center px-4 py-3 text-sm w-full flex-wrap ${
       isCartPage ? "bg-white text-black" : "bg-black text-white"
@@ -16,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ isCartPage }) => {
       </div>
 
       <nav className="flex items-center gap-3 sm:gap-6 text-xs sm:text-sm mr-2 flex-wrap">
-        <Link to="/" className={`hover:underline whitespace-nowrap ${isCartPage ? "text-black" : "text-white"}`}>
+        <Link to="/about" className={`hover:underline whitespace-nowrap ${isCartPage ? "text-black" : "text-white"}`}>
           About Us
         </Link>
         <Link to="/waitlist" className={`hover:underline whitespace-nowrap ${isCartPage ? "text-black" : "text-white"}`}>
@@ -29,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ isCartPage }) => {
           className={`px-3 py-1 text-xs sm:text-sm rounded-[6px] shadow ${
             isCartPage ? "bg-black text-white hidden" : "bg-white text-black"
           }`}
-        >
+       onClick={()=>navigate('/cart')} >
           Buy
         </button>
       </nav>

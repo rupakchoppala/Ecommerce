@@ -9,6 +9,8 @@ import Testimonial from './components/Testimonial';
 import InfoAccordion from './components/Accordion';
 import ShippingCheckout from "./components/CheckOut";
 import {Toaster} from 'react-hot-toast'
+import AboutUs from "./pages/AboutUs";
+import Waitlist from "./pages/waitlist";
 const HomePage: React.FC = () => (
   <>
     <Hero />
@@ -27,7 +29,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="cart" element={<ShippingCheckout />} />
+          <Route path="/cart" element={<ShippingCheckout />} />
+          <Route path='/about' element={<AboutUs/>}/>
+          <Route path='/waitlist' element={<Waitlist/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

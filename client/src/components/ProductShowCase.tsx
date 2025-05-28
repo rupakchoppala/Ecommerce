@@ -127,7 +127,14 @@ useEffect(() => {
   Add to Cart
 </button>
 
-            <button className="bg-black text-white px-6 py-2 md:py-5 w-full sm:w-[428px] rounded-[9px] text-sm hover:bg-gray-800 transition">
+            <button className="bg-black text-white px-6 py-2 md:py-5 w-full sm:w-[428px] rounded-[9px] text-sm hover:bg-gray-800 transition"
+             onClick={() => {
+              if (!selectedSize) {
+                alert("Please select a size before adding to cart.");
+                return;
+              }
+              navigate('/cart', { state: { selectedSize, product } });
+            }}>
               Buy
             </button>
           </div>
