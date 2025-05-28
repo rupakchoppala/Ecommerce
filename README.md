@@ -99,7 +99,7 @@ npm run dev
 
 | Home Page | Product Page | Cart Page |
 |:---------:|:------------:|:---------:|
-| ![Home](https://your-image-url.com/home.png) | ![Product](https://your-image-url.com/product.png) | ![Cart](https://your-image-url.com/cart.png) |
+| ![Home](https://your-image-url.com/home.png) | ![Product](https://your-image-url.com/product.png) | ![Cart](https://github.com/rupakchoppala/Ecommerce/blob/main/client/public/Screenshot%20from%202025-05-28%2021-30-41.png) |
 
 > Replace the above screenshot URLs with actual deployed image links.
 
