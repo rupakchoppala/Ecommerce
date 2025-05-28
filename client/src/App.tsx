@@ -11,6 +11,8 @@ import ShippingCheckout from "./components/CheckOut";
 import {Toaster} from 'react-hot-toast'
 import AboutUs from "./pages/AboutUs";
 import Waitlist from "./pages/waitlist";
+import LoginPage from "./pages/Login";
+import RegisterPage from "./pages/Register";
 const HomePage: React.FC = () => (
   <>
     <Hero />
@@ -33,6 +35,8 @@ function App() {
           <Route path='/about' element={<AboutUs/>}/>
           <Route path='/waitlist' element={<Waitlist/>}/>
         </Route>
+        <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/register' element={<RegisterPage/>}/>
       </Routes>
     </BrowserRouter>
   );
