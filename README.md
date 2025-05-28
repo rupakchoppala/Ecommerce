@@ -99,7 +99,7 @@ npm run dev
 
 | Home Page | Product Page | Cart Page |
 |:---------:|:------------:|:---------:|
-| ![Home](https://your-image-url.com/home.png) | ![Product](https://your-image-url.com/product.png) | ![Cart](https://github.com/rupakchoppala/Ecommerce/blob/main/client/public/Screenshot%20from%202025-05-28%2021-30-41.png) |
+| ![Home](https://github.com/rupakchoppala/Ecommerce/blob/main/client/public/Screenshot%20from%202025-05-28%2021-31-27.png) | ![Product](https://github.com/rupakchoppala/Ecommerce/blob/main/client/public/Screenshot%20from%202025-05-28%2021-31-43.png) | ![Cart](https://github.com/rupakchoppala/Ecommerce/blob/main/client/public/Screenshot%20from%202025-05-28%2021-30-41.png) |
 
 > Replace the above screenshot URLs with actual deployed image links.
 
@@ -121,6 +121,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 - **Developer**: [Rupak Choppala](https://www.linkedin.com/in/rupak-choppala-689659253)
 - **Email**: [rupakchoppala@gmail.com](mailto:rupakchoppala@gmail.com)
-- **Live Site**: [https://your-live-demo-link.com](https://your-live-demo-link.com)
+
 
 ---
