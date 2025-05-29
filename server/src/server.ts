@@ -14,7 +14,7 @@ const PORT = 5000;
 import addressRouter from "./routes/address";
 app.use(cors());
 app.use(express.json());
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/uploads', express.static(path.join(__dirname, 'dist/uploads')));
 // Path to the file where orders will be saved
 const ordersFilePath = path.join(__dirname, "orders.json");
 
