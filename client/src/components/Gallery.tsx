@@ -35,7 +35,7 @@ const Gallery = () => (
       <img
         src={img2}
         alt="Gallery 2"
-        className="block lg:hidden w-full h-[100px] rounded-[5px]"
+        className="block lg:hidden w-full h-[139px] rounded-[5px]"
       />
 
       <img
