@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --respawn src/server.ts",
+    "copy-uploads": "cp -r server/src/uploads dist/uploads",
     "build": "tsc",
     "start": "node dist/server.js"
   },
