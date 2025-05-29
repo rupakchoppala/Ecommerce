@@ -7,7 +7,7 @@ interface FooterProps {
 const Footer = ({ phone, email }: FooterProps) => (
   
   <footer className="text-white  md:px-20 md:py-10 text-xs relative overflow-x-hidden">
-    <div className="flex flex-row justify-between items-start w-full gap-6 flex-wrap">
+    <div className="flex flex-row justify-between items-start w-full gap-6">
 
       {/* Left Section: Logo + Nav */}
       <div className="flex flex-col md:gap-4 gap-6  ml-5">
