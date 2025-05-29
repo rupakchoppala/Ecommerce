@@ -57,7 +57,7 @@ const AboutUs: React.FC = () => {
         <p className="text-gray-700 max-w-xl mx-auto mb-4 text-lg">
           Our mission is to redefine online shopping through innovation, connection, and care. We aim to make every transaction meaningful.
         </p>
-        <p className="font-semibold text-red-700">Thank you for being part of the ShopEase family.</p>
+        <p className="font-semibold text-red-700">Thank you for being part of the Eclypse family.</p>
       </motion.div>
     </div>
   );
