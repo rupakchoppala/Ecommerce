@@ -14,7 +14,7 @@ const ProductShowcase = () => {
   }
   const [selectedSize, setSelectedSize] = useState("");
   const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  //const [loading, setLoading] = useState<boolean>(true);
   // const sizes = ['XS', 'S', 'M', 'L', 'XL'];
   // const thumbnails = [
   //   "/vermillion1.jpg",
@@ -24,12 +24,12 @@ const ProductShowcase = () => {
 useEffect(() => {
     const fetchProducts = async (): Promise<void> => {
       try {
-        const response = await axios.get<Product[]>('http://localhost:5000/api/products');
+        const response = await axios.get<Product[]>('https://ecommerce-1-dxvk.onrender.com/api/products');
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
       } finally {
-        setLoading(false);
+        //setLoading(false);
       }
     };
 

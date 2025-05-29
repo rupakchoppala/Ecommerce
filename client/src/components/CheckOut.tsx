@@ -2,7 +2,7 @@ import { ChevronLeft } from "lucide-react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
-import toast, { ToastBar } from "react-hot-toast";
+import toast from "react-hot-toast";
 declare global {
   interface Window {
     Razorpay: any;
@@ -10,8 +10,8 @@ declare global {
 }
 export default function ShippingCheckout() {
   const location = useLocation();
-  const { selectedSize, product } = location.state || {};
-
+  const { selectedSize } = location.state || {};
+   
   useEffect(() => {
     if (!selectedSize) {
       toast.error("No size selected, please select size from product page.");
@@ -49,7 +49,7 @@ export default function ShippingCheckout() {
 
   const { beforeTax, tax, total } = calculateTotals();
 
-  const ENDPOINT = "http://localhost:5000/api/address";
+  const ENDPOINT = "https://ecommerce-1-dxvk.onrender.com/api/address";
 
   useEffect(() => {
     axios
@@ -111,7 +111,7 @@ export default function ShippingCheckout() {
         const amount = total * 100; // in paisa
     
         // Step 1: Create order
-        const orderRes = await fetch("http://localhost:5000/api/payment/orders", {
+        const orderRes = await fetch("https://ecommerce-1-dxvk.onrender.com/api/payment/orders", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ amount }),
@@ -128,7 +128,7 @@ export default function ShippingCheckout() {
           order_id: orderData.id,
           handler: async function (response: any) {
             // Step 3: Verify payment
-            const verifyRes = await fetch("http://localhost:5000/api/payment/verify", {
+            const verifyRes = await fetch("https://ecommerce-1-dxvk.onrender.com/api/payment/verify", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(response),
@@ -146,7 +146,7 @@ export default function ShippingCheckout() {
                 paymentId: response.razorpay_payment_id,
               };
     
-              await axios.post("http://localhost:5000/api/orders", orderDetails);
+              await axios.post("https://ecommerce-1-dxvk.onrender.com/api/orders", orderDetails);
               toast.success("Order placed successfully!");
             } else {
               toast.error("Payment verification failed.");

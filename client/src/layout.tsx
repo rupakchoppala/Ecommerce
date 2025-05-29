@@ -9,12 +9,12 @@ interface ContactDetails {
 }
 const Layout: React.FC = () => {
   const [contact, setContact] = useState<ContactDetails | null>(null);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchContact() {
       try {
-        const response = await fetch("http://localhost:5000/api/contact"); // your backend API endpoint
+        const response = await fetch("https://ecommerce-1-dxvk.onrender.com/api/contact"); // your backend API endpoint
         if (!response.ok) throw new Error("Network response not ok");
         const data = await response.json();
         setContact({
@@ -26,7 +26,8 @@ const Layout: React.FC = () => {
         console.error("Failed to fetch contact details:", error);
         setContact({ phone: "N/A", email: "N/A" }); // fallback
       } finally {
-        setLoading(false);
+        // setLoading(false);
+        console.log("error");
       }
     }
 

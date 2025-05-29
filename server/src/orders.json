@@ -164,5 +164,29 @@
     "tax": 1696,
     "total": 9895,
     "paymentId": "pay_QaQFpZFWxY6yMV"
+  },
+  {
+    "id": 8,
+    "timestamp": "2025-05-28T17:01:37.983Z",
+    "shippingAddress": {
+      "firstName": "Rupak",
+      "lastName": "Choppala",
+      "street": "123 Main St",
+      "aptNumber": "A1",
+      "state": "Andhra Pradesh",
+      "zip": "521201"
+    },
+    "items": [
+      {
+        "id": 1,
+        "name": "Silhouette No. 1 – Vermilion",
+        "price": 7999,
+        "quantity": 1
+      }
+    ],
+    "shipping": 200,
+    "tax": 1696,
+    "total": 9895,
+    "paymentId": "pay_QaQLYHvBpBvQOV"
   }
 ]

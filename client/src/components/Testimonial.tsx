@@ -8,7 +8,7 @@ const TestimonialCarousel: React.FC = () => {
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/testimonials')
+    axios.get('https://ecommerce-1-dxvk.onrender.com/api/testimonials')
       .then(res => setTestimonialsData(res.data))
       .catch(err => console.error('Error fetching testimonials:', err));
   }, []);

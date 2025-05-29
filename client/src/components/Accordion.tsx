@@ -19,7 +19,7 @@ const accordionData = [
 const InfoAccordion = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleAccordion = (index) => {
+  const toggleAccordion = (index:any) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 

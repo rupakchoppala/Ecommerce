@@ -5,24 +5,25 @@ const RegisterPage: React.FC = () => {
   const [fullName, setFullName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+  // const [loading, setLoading] = useState<boolean>(false);
+  // const [error, setError] = useState<string | null>(null);
   const navigate=useNavigate();
   const handleRegister = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError(null);
-    setLoading(true);
+    // setError(null);
+    // setLoading(true);
 
     // Fake login simulation: wait 1.5 seconds then redirect
     setTimeout(() => {
-      setLoading(false);
+      //setLoading(false);
 
       // Basic fake validation: if email and password not empty, succeed
       if (email.trim() !== "" && password.trim() !== "" && fullName.trim() !== "" ) {
         // Redirect to home page
         navigate("/");
       } else {
-        setError("Invalid email or password");
+       // setError("Invalid email or password");
+       console.log("Invalid credentilas");
       }
     }, 1500);
   };
