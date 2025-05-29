@@ -13,7 +13,7 @@ const app = express();
 const PORT = 5000;
 import addressRouter from "./routes/address.js";
 app.use(cors({
-  origin: 'https://ecommerce-3-q5sl.onrender.com/'
+  origin: 'https://ecommerce-3-q5sl.onrender.com'
 }));;
 app.use(express.json());
 const __dirname = path.resolve();
