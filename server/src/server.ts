@@ -16,6 +16,7 @@ app.use(cors({
   origin: 'https://ecommerce-3-q5sl.onrender.com/'
 }));;
 app.use(express.json());
+const __dirname = path.resolve();
 app.use('/uploads', express.static(path.join(__dirname, 'dist/uploads')));
 // Path to the file where orders will be saved
 const ordersFilePath = path.join(__dirname, "orders.json");
