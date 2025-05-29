@@ -1,11 +1,12 @@
 {
-    "compilerOptions": {
-      "target": "ES6",
-      "module": "CommonJS",
-      "outDir": "dist",
-      "rootDir": "src",
-      "strict": true,
-      "esModuleInterop": true
-    }
+  "compilerOptions": {
+    "target": "ES2020",          // or ES6/ESNext, your choice
+    "module": "ESNext",          // <-- IMPORTANT: Use ES modules output
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
   }
-  
+}

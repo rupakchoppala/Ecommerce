@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = require("express");
-const router = (0, express_1.Router)();
+import { Router } from "express";
+const router = Router();
 let address = {
     firstName: "Rupak",
     lastName: "Choppala",
@@ -17,7 +15,7 @@ router.get("/", (req, res) => {
 // PUT - update address
 router.put("/", (req, res) => {
     const newAddress = req.body;
-    address = Object.assign(Object.assign({}, address), newAddress);
+    address = { ...address, ...newAddress };
     res.json({ message: "Address updated", address });
 });
-exports.default = router;
+export default router;
