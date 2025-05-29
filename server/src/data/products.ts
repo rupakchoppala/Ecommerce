@@ -7,9 +7,9 @@ export const products = [
     currency: '₹',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
     images: [
-      'http://localhost:5000/uploads/vermillion1.jpg',
-      'http://localhost:5000/uploads/vermillion2.jpg',
-      'http://localhost:5000/uploads/vermillon3.jpg'
+      'https://ecommerce-1-dxvk.onrender.com/uploads/vermillion1.jpg',
+      'https://ecommerce-1-dxvk.onrender.com/uploads/vermillion2.jpg',
+      'https://ecommerce-1-dxvk.onrender.com/uploads/vermillon3.jpg'
     ],
     stock: {
       XS: 10,
