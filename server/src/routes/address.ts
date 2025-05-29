@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { Address } from "../types/Address";
+import { Address } from "../types/Address.js";
 
 const router = Router();
 

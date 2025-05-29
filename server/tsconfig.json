@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES2020",          // or ES6/ESNext, your choice
-    "module": "ESNext",          // <-- IMPORTANT: Use ES modules output
-    "outDir": "dist",
-    "rootDir": "src",
-    "strict": true,
+    "target": "ES2020",
+    "module": "Node16",
+    "moduleResolution": "node16",
+    "outDir": "./dist",
     "esModuleInterop": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true
-  }
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*"]
 }

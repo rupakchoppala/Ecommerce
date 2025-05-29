@@ -2,16 +2,16 @@ import express, { Request, Response,NextFunction } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
-import { products } from './data/products';
-import { testimonials } from './data/testimonilas';
-import { contact } from './data/contacts';
+import { products } from './data/products.js';
+import { testimonials } from './data/testimonilas.js';
+import { contact } from './data/contacts.js';
 import path from 'path';
 import fs from 'fs';
 import Razorpay from 'razorpay';
 import crypto from "crypto";
 const app = express();
 const PORT = 5000;
-import addressRouter from "./routes/address";
+import addressRouter from "./routes/address.js";
 app.use(cors({
   origin: 'https://ecommerce-3-q5sl.onrender.com/'
 }));;
