@@ -12,7 +12,9 @@ import crypto from "crypto";
 const app = express();
 const PORT = 5000;
 import addressRouter from "./routes/address";
-app.use(cors());
+app.use(cors({
+  origin: 'https://ecommerce-3-q5sl.onrender.com/'
+}));;
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'dist/uploads')));
 // Path to the file where orders will be saved
