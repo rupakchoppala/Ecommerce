@@ -56,7 +56,7 @@ const Footer = ({ phone, email }: FooterProps) => (
         </div>
       </div>
       {/* Contact Info */}
-      <div className="flex flex-col gap-4 mt-6 md:mt-0 text-[11px] text-white/90 md:ml-20 w-full md:w-auto">
+      <div className="flex flex-col gap-4 mt-3  md:mt-0 text-[11px] text-white/90 md:ml-20 w-full md:w-auto">
         <div className="mt-4 md:mt-12 mb-3">
           <p
             className="uppercase text-white/50 text-[10px] mb-1 tracking-wide"
